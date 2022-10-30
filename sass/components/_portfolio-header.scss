@@ -1,0 +1,15 @@
+.header-portfolio {
+	margin-bottom: 60px;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 1px;
+		background-color: $underline-color;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 94px;
+	}
+}

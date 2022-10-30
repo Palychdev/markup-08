@@ -1,0 +1,36 @@
+.works .item:not(:last-child) {
+	margin-right: 30px;
+}
+
+.work-examples {
+	display: none;
+	margin-bottom: 94px;
+
+	@media screen and (min-width: $desktop){
+		display: block;
+	}
+}
+
+.occupation {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 70px;
+		background-color: rgba(47, 48, 58, 0.8);
+	}
+}
+
+.occupation .text-title {
+	position: absolute;
+	margin: 0;
+	left: 0;
+	bottom: 27px;
+	width: 100%;
+	text-align: center;
+	color: $primary-white-color;
+}

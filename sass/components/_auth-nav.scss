@@ -1,0 +1,155 @@
+.auth-nav {
+	display: flex;
+
+	@media screen and (min-width: $tablet) {
+		flex-wrap: wrap;
+		margin-left: 84px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-left: 305px;
+	}
+}
+
+.auth-nav .item {
+
+	&-phone {
+		@media screen and (min-width: $tablet) {
+			margin-left: 0;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-left: 30px;
+		}
+	}
+}
+
+.icon-email {
+	width: 14px;
+	height: 10px;
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 16px;
+		height: 12px;
+	}
+}
+
+.icon-phone {
+	width: 10px;
+	height: 14px;
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 10px;
+		height: 16px;
+	}
+}
+
+.email,
+.tel {
+
+	color: $primary-text-color;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.02em;
+
+	&.link {
+		margin-left: 0;
+
+		@media screen and (min-width: $tablet) {
+			margin-left: 10px;
+
+		}
+	}
+
+	.item-email:hover &,
+	.item-email:focus &,
+	.item-phone:hover &,
+	.item-phone:focus & {
+		color: $accent-color;
+		fill: $accent-color;
+	}
+}
+
+.tel {
+	font-size: 34px;
+	line-height: 1.17;
+	color: $accent-color;
+
+
+	@media screen and (min-width: $tablet) {
+		font-size: 12px;
+		color: $primary-text-color;
+		margin-bottom: 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 14px;
+		line-height: 1.14;
+	}
+}
+
+.item-phone {
+	margin-bottom: 32px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.item-email {
+	margin-bottom: 64px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.email {
+	font-size: 24px;
+	line-height: 1.17;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 12px;
+		line-height: 1.14;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 14px;
+		line-height: 1.14;
+	}
+}
+
+.email-header {
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 10px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 0;
+	}
+}
+
+.item-email,
+.item-phone {
+	display: flex;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+		fill: $accent-color;
+	}
+}

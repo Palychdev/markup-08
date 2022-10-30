@@ -1,0 +1,135 @@
+	.site-nav,
+	.auth-nav {
+		display: none;
+
+		&.is-open {
+			display: block;
+		}
+
+		@media screen and (min-width: $tablet) {
+			display: flex;
+		}
+	}
+
+	.auth-nav {
+		&.is-open {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+		}
+
+	}
+
+	.social-nav {
+		display: none;
+
+		&.is-open {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		@media screen and (min-width: $tablet) {
+			display: none;
+		}
+	}
+
+	.container.main-nav {
+		position: relative;
+		height: 60px;
+
+		@media screen and (min-width: $tablet) {
+			height: 80px;
+		}
+	}
+
+	.burger-menu__btn {
+		position: absolute;
+		display: inline-flex;
+		top: 10px;
+		right: 15px;
+		padding: 0;
+		margin: 0;
+		border: none;
+		background-color: transparent;
+
+		& .close-mobile {
+			display: none;
+		}
+
+		&.is-open .close-mobile {
+			display: block;
+		}
+
+		&.is-open .menu-mobile {
+			display: none;
+		}
+
+		&:hover .menu-mobile,
+		&:focus .menu-mobile,
+		&:hover .close-mobile,
+		&:focus .close-mobile {
+
+			fill: $accent-color;
+		}
+
+	}
+
+	.menu-container {
+
+		&.is-open {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			padding: 20px;
+			width: 100%;
+			background-color: $primary-white-color;
+			z-index: 2;
+			outline: 1px solid $accent-color;
+		}
+
+
+		@media screen and (min-width: $tablet) {
+			display: flex;
+			align-items: center;
+			position: static;
+			background-color: transparent;
+
+		}
+	}
+
+	.social-nav__link {
+		text-decoration: none;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.22;
+		letter-spacing: 0.02em;
+		color: $accent-color;
+	}
+
+	.social-nav .item {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+	}
+
+	.social-nav__link {
+		display: flex;
+	}
+
+	.social-nav .line {
+		width: 1px;
+		height: 22px;
+		margin-left: 10px;
+		background-color: rgba(33, 33, 33, 0.2);
+	}
+
+	.burger-menu__btn,
+	.burger-menu .icon {
+		@media screen and (min-width: $tablet) {
+			display: none;
+		}
+	}
